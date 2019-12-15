@@ -1,5 +1,9 @@
 // main ball on tube type A
 function TubeTypeA(ball, counter) {
+  if (ball.length < 1 || ball.length > 1000) {
+    return console.log("The character must be 1 - 1000 character")
+  }
+
   let rightHand, leftHand = 0
   let ballTypeS = ""
   let ballReplace = ball.replace(/\s/g, '')
@@ -108,3 +112,4 @@ TubeTypeA('7 2 5 9 1', 0) // 4
 TubeTypeA('5 4 1', 0) // 1
 TubeTypeA('9 1', 0) // 0
 TubeTypeA('2 1', 0) // 0
+TubeTypeA('') // invalid character
