@@ -5,9 +5,9 @@ function mineSweeper(value) {
   // Make a loop to get all numberSplit values
   for(i = 0; i < numberSplit.length; i++) {
     numbers.push(numberSplit[i])
-    // cek kondisi number, apabila number bernilai 1, tambah 1 untuk variabel ranjau
+    // check number condition, if number is 1, add 1 for mine variable
     if (Number(numberSplit[i]) == 1) {
-      // check number condition, if number is 1, add 1 for mine variable
+      // check again, if there is an R value before the letter 1, then skip this iteration
       if(numbers.length > 0 &&  numbers[i] == "R") {
         continue
       } else {
