@@ -4,16 +4,16 @@ function himpunan(data) {
     let reverse = []
     let tempA = []
     let tempB = []
-    let potong = false
+    let split = false
     dataSplit = data.split(' ');
     // Ambil data satu persatu
     for (let i = 0; i < dataSplit.length; i++) {
         for (let j = 0; j < dataSplit[i].length; j++) {
             if (dataSplit[i][j] == '-') {
-                potong = true
+                split = true
             }
         }
-        if (potong) {
+        if (split) {
             tempB.push(dataSplit[i])
         } else {
             tempA.push(Number(dataSplit[i]))
@@ -25,7 +25,7 @@ function himpunan(data) {
     tempB[0] = Number(splitB[1])
     let pos = 0
     let min = tempB[0]
-    let max = tempB[0]
+    let max = min
     for (let i = 0; i < tempB.length; i++) {
         for(let j =0; j < tempB.length; j++) {
             if(tempB[j] != null) {
@@ -44,7 +44,7 @@ function himpunan(data) {
     }
     // ======================================================
     min = tempA[0]
-    max = tempA[0]
+    max = min
     if((Number(tempA[0]) < Number(tempA[1])) && (Number(tempA[1]) < Number(tempA[2]))) {
         a = tempA
     } else {
@@ -83,3 +83,5 @@ function himpunan(data) {
 console.log(himpunan('1 2 3 4-10 2 8 1')) // 19
 console.log(himpunan('5 5 1-2 1 0')) // 10
 console.log(himpunan('10 20 30-0 0 0')) // 60
+
+// console.log(himpunan('10 20-10 50')) // 60
