@@ -18,6 +18,9 @@ function lamp(data) {
     let pressSwitch = []
     let numberOfLights = data.split(' ')[0]
     let numberOfSwitch = data.split(' ')[1]
+    if ( (Number(numberOfLights) < 1 || Number(numberOfLights) > 1000) || (Number(numberOfSwitch) < 1 || Number(numberOfSwitch) > 500) ) {
+        return "Error"
+    }
     for (let i = 1; i <= Number(numberOfLights); i++) {
         lamp.push({
             number: i,
@@ -40,3 +43,5 @@ function lamp(data) {
 console.log(lamp('4 1')); // 4
 console.log(lamp('10 4')) // 6
 console.log(lamp('10 3')) // 4
+console.log(lamp('0 501')) // error
+console.log(lamp('1001 3')) // error
