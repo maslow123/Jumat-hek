@@ -10,7 +10,9 @@ function queue(data) {
     for(let i=0; i < data.length; i++) {
         counter++
         comparison = realData[counter]
-        if (counter >= realData.length) break
+        if (counter >= realData.length) {
+            break
+        }
         if(cutters == 1 && i == data.length - 1) {
             return realData[counter]
         } else {

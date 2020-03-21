@@ -80,8 +80,9 @@ function himpunan(data) {
     return result
 }
 
-console.log(himpunan('1 2 3 4-10 2 8 1')) // 19
-console.log(himpunan('5 5 1-2 1 0')) // 10
-console.log(himpunan('10 20 30-0 0 0')) // 60
+// console.log(himpunan('1 2 3 4-10 2 8 1')) // 19
+console.log(himpunan('1 2 3 4-1 2 3 4')) // 19
+// console.log(himpunan('5 5 1-2 1 0')) // 10
+// console.log(himpunan('10 20 30-0 0 0')) // 60
 
 // console.log(himpunan('10 20-10 50')) // 60
